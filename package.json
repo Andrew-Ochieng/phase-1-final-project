@@ -1,0 +1,16 @@
+{
+  "name": "final-projo",
+  "version": "1.0.0",
+  "description": "Andrew Omondi Ochieng",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss build -i ./src/input.css -o ./dist/output.css"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
