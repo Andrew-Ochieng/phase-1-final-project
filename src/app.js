@@ -19,23 +19,23 @@ function getLatest() {
         data.forEach(latest => {
 
             output += `
-                <div class="md:flex justify-bewtween">
-                    <div class="bg-green-300 rounded-md mx-8 ">
-                        <div class="w-1/2">
-                            <img class="w-1/2 rounded-lg" id="img-url" src="${latest.urlToImage}" alt="">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-gray-800">${latest.title}</h3>
-                            <h3>${latest.name}</h3>
-                            <h4>${latest.author}</h4>
-                            <p>${latest.description}</p>
-                            <p>${latest.content}</p>
-                            <a class="text-red-500 bg-green-400 text-sm font-medium" href="${latest.url}">
-                                Read more
-                            </a>
-                        </div>
-                    </div>
+            <div class="md:flex justify-bewtween">
+            <div class="bg-green-300 rounded-md mx-4 ">
+                <div class="">
+                    <img class="rounded-t-lg" id="img-url" src="${latest.urlToImage}" alt="">
                 </div>
+                <div class="p-4 my-8">
+                    <h3 class="text-lg font-semibold text-gray-800">${latest.title}</h3>
+                    <h3>${latest.name}</h3>
+                    <h4>${latest.author}</h4>
+                    <p>${latest.description}</p>
+                    <p class="mb-6">${latest.content}</p>
+                    <a class="text-white bg-green-600 text-lg font-medium px-4 py-4 rounded-md" href="${latest.url}">
+                        Read more
+                    </a>
+                </div>
+            </div>
+        </div>
             `
         });
 
@@ -55,17 +55,17 @@ function getLocal() {
                 
                 news += `
                 <div class="md:flex justify-bewtween">
-                    <div class="bg-green-300 rounded-md mx-8 ">
-                        <div class="w-1/2">
-                            <img class="w-1/2 rounded-lg" id="img-url" src="${local.urlToImage}" alt="">
+                    <div class="bg-green-300 rounded-md mx-4 ">
+                        <div class="">
+                            <img class="rounded-t-lg" id="img-url" src="${local.urlToImage}" alt="">
                         </div>
-                        <div class="p-4">
+                        <div class="p-4 my-8">
                             <h3 class="text-lg font-semibold text-gray-800">${local.title}</h3>
                             <h3>${local.name}</h3>
                             <h4>${local.author}</h4>
                             <p>${local.description}</p>
-                            <p>${local.content}</p>
-                            <a class="text-red-500 bg-green-400 text-sm font-medium" href="${local.url}">
+                            <p class="mb-6">${local.content}</p>
+                            <a class="text-white bg-green-600 text-lg font-medium px-4 py-4 rounded-md" href="${local.url}">
                                 Read more
                             </a>
                         </div>

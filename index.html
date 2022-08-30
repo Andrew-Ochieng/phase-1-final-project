@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mkulima News Today</title>
-    <link rel="stylesheet" href="./dist/output.css">
+    <!-- <link rel="stylesheet" href="./dist/output.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -43,12 +44,12 @@
 
     <!--latest-news-->
     <section class="lg:px-16 md:px-8 px-4 py-8">
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center py-8">
             <h2 class="md:text-2xl text-xl font-semibold text-green-700">Latest News</h2>
             <button class="bg-green-700 rounded-md text-white font-semibold px-4 py-2">See All</button>
         </div>
 
-        <div id="output" class="md:flex justify-bewtween items-center">
+        <div id="output" class="md:flex justify-bewtween">
             
             
         </div>
@@ -57,12 +58,12 @@
 
     <!--local-news-->
     <section class="lg:px-16 md:px-8 px-4 py-8">
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center py-8">
             <h2 class="md:text-2xl text-xl font-semibold text-green-700">Local News</h2>
             <button class="bg-green-700 rounded-md text-white font-semibold px-4 py-2">See All</button>
         </div>
 
-        <div id="news" class="md:flex justify-bewtween items-center">
+        <div id="news" class="md:flex justify-bewtween">
             
             
         </div>
@@ -83,10 +84,23 @@
     </section>
 
 
-    <!--crop-->
+    <!--post news-->
     <section class="lg:px-16 md:px-8 px-4 py-8">
-        <h2 class="md:text-2xl text-xl font-semibold text-green-700">Crops</h2>
+        <h2 class="md:text-2xl text-xl font-semibold text-green-700">Post Article</h2>
         <div>
+            <form action="#" method="post">
+                <div class="py-4">
+                    <label class="" for="title">Title</label><br>
+                    <input class="w-1/2 px-2 py-2 outline-none ring-2 rounded-md" type="text" id="title" id="Type title here...">
+                </div>
+                <div>
+                    <label class="" for="content">Content</label><br>
+                    <textarea class="w-1/2 px-2 py-2 outline-none ring-2 rounded-md" name="content" id="" cols="30" rows="3"></textarea>
+                </div>
+                <button class="py-2 px-8 my-2 rounded-md text-white font-semibold hover:text-gray-700 bg-green-500 hover:bg-green-600 shadow-md hover-shadow-xl shadow-cyan-600" type="submit">
+                    Post
+                </button>
+            </form>
 
         </div>
     </section>
