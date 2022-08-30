@@ -1,0 +1,35 @@
+{
+    
+    "articles": [
+        {
+            "name": "CarScoops",
+            "author": "Brad Anderson",
+            "title": "Tesla SpaceX Model R Imagined As A 2,950 HP Hypercar With Rocket Boosters",
+            "description": "The Tesla SpaceX Model R makes the second-gen Roadster seem a little restrained.",
+            "url": "https://www.carscoops.com/2022/08/tesla-spacex-model-r-imagined-as-a-2950-hp-hypercar-with-rocket-boosters/",
+            "urlToImage": "https://www.carscoops.com/wp-content/uploads/2022/08/Tesla-SpaceX-Model-R-1a.jpg",
+            "publishedAt": "2022-08-28T18:51:07Z",
+            "content": "The article contains renderings by Maximilian Schneider that are neither endorsed by nor related to Tesla.\r\nElon Musk has had a lot to say about the second-generation Tesla Roadster over the last fiv… [+1824 chars]"
+        },
+        {
+            "name": "Slickdeals.net",
+            "author": "RLY18",
+            "title": "Shimoda Explore V2 35 Backpack Starter Kit (Large DSLR V2 Core Unit Modular Camera Insert) $279.9",
+            "description": "For anyone into photography, this is an incredible bag at an incredible price. Shimoda is one of the newer players that has emerged in the last few years and I can vouch for them as having the best ph ...",
+            "url": "https://slickdeals.net/f/16005820-shimoda-explore-v2-35-backpack-starter-kit-large-dslr-v2-core-unit-modular-camera-insert-279-9",
+            "urlToImage": "https://static.slickdealscdn.com/attachment/1/8/9/7/9/1/4/7/11975830.attach",
+            "publishedAt": "2022-08-28T18:41:11Z",
+            "content": "For anyone into photography, this is an incredible bag at an incredible price. Shimoda is one of the newer players that has emerged in the last few years and I can vouch for them as having the best p… [+441 chars]"
+        },
+        {
+            "name": "Activistpost.com",
+            "author": "Activist Post",
+            "title": "Another Motorcyclist Fatality Involving Tesla Driver; “It is unclear whether or not Autopilot was involved”",
+            "description": "By B.N. Frank Tesla vehicles have been and continue to be associated with numerous security (see 1, 2, 3) and safety issues, some of which...\nAnother Motorcyclist Fatality Involving Tesla Driver; “It is unclear whether or not Autopilot was involved”",
+            "url": "https://www.activistpost.com/2022/08/another-motorcyclist-fatality-involving-tesla-driver-it-is-unclear-whether-or-not-autopilot-was-involved.html",
+            "urlToImage": "https://www.activistpost.com/wp-content/uploads/2022/08/tesla-10-pixa.jpg",
+            "publishedAt": "2022-08-28T18:24:21Z",
+            "content": "By B.N. Frank\r\nTesla vehicles have been and continue to be associated with numerous security (see 1, 2, 3) and safety issues, some of which have led to accidents, lawsuits, recalls, and investigation… [+4001 chars]"
+        }
+    ]
+}
