@@ -1,4 +1,19 @@
 // write code here
+// toggle navbar
+const hambuger = document.getElementById("hambuger")
+const navbar = document.getElementById("menu")
+
+hambuger.addEventListener('click', () => {
+    navbar.classList.toggle("hidden")
+})
+
+function colorChange() {
+    hambuger.style.color = "white"
+
+}
+
+
+
 // endpoints
 // const apiUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=1b59ecc8e3f24bdc800f1e087490230b';
 // const techUrl = 'https://inshorts.deta.dev/news?category=technology'
@@ -106,13 +121,14 @@ function postNews() {
     })
         .then((response) => response.json())
         .then((data) => {
-            // console.log(data)
+            console.log(data)
             if (postTitle !== "" && author !== "" && postContent.value !== "") {
-                document.getElementById("public-posts").innerHTML += `
+                let posts = document.getElementById("public-posts").innerHTML;
+                posts += `
                     <divclass="my-4 rounded-md border-2 border-gray-800">
-                        <h2 class="text-xl text-gray-800 font-semibold">Title: ${postTitle}</h2>
-                        <h3 class="my-2 text-base font-medium text-green-600">Author: ${author}</h3>
-                        <p class="text-base">Content: ${postContent}</p>
+                        <h2 class="text-xl text-gray-800 font-semibold">Title: ${data.postTitle}</h2>
+                        <h3 class="my-2 text-base font-medium text-green-600">Author: ${data.author}</h3>
+                        <p class="text-base">Content: ${data.postContent}</p>
                     </div>
                 `
             } else {
