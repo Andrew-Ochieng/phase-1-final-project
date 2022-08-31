@@ -128,9 +128,9 @@ function postNews() {
                 
                 document.getElementById("public-posts").innerHTML += `
                     <div class="my-4 rounded-md border-2 border-gray-800">
-                        <h2 class="text-xl text-gray-800 font-semibold">Title: ${data.postTitle}</h2>
-                        <h3 class="my-2 text-base font-medium text-green-600">Author: ${data.author}</h3>
-                        <p class="text-base">Content: ${data.postContent}</p>
+                        <h2 class="text-xl text-gray-800 font-semibold">Title: ${postTitle}</h2>
+                        <h3 class="my-2 text-base font-medium text-green-600">Author: ${author}</h3>
+                        <p class="text-base">Content: ${postContent}</p>
                     </div>
                 `
             } else {
