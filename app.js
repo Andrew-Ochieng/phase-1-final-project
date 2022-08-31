@@ -91,7 +91,7 @@ form.addEventListener('submit', (e) => {
 function postNews() {
     const postTitle = document.getElementById("post-title").value;
     const postContent = document.getElementById("post-content").value;
-    const author = document.getElementById("author")
+    const author = document.getElementById("author").value;
 
     fetch(postsUrl, {
         method: "POST",
@@ -110,9 +110,9 @@ function postNews() {
             if (postTitle !== "" && author !== "" && postContent.value !== "") {
                 document.getElementById("public-posts").innerHTML += `
                     <divclass="my-4 rounded-md border-2 border-gray-800">
-                        <h2 class="text-gray-800 font-semibold">Title: ${postTitle}</h2>
-                        <h3 class="my-2 text-base font-medium text-green-700">Author: ${author}</h3>
-                        <p>Content: ${postContent}</p>
+                        <h2 class="text-xl text-gray-800 font-semibold">Title: ${postTitle}</h2>
+                        <h3 class="my-2 text-base font-medium text-green-600">Author: ${author}</h3>
+                        <p class="text-base">Content: ${postContent}</p>
                     </div>
                 `
             } else {
