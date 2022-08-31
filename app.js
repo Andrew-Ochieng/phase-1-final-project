@@ -91,6 +91,7 @@ form.addEventListener('submit', (e) => {
 function postNews() {
     const postTitle = document.getElementById("post-title").value;
     const postContent = document.getElementById("post-content").value;
+    const author = document.getElementById("author")
 
     fetch(postsUrl, {
         method: "POST",
@@ -99,22 +100,26 @@ function postNews() {
         },
         body: JSON.stringify({
             title: postTitle,
+            name: author,
             body: postContent
         }),
     })
         .then((response) => response.json())
         .then((data) => {
             // console.log(data)
-            if (postTitle !== "" && postContent.value !== "") {
+            if (postTitle !== "" && author !== "" && postContent.value !== "") {
                 document.getElementById("public-posts").innerHTML += `
-                    <div>
-                        <h2>${postTitle}</h2>
-                        <p>${postContent}</p>
+                    <divclass="my-4 rounded-md border-2 border-gray-800">
+                        <h2 class="text-gray-800 font-semibold">Title: ${postTitle}</h2>
+                        <h3 class="my-2 text-base font-medium text-green-700">Author: ${author}</h3>
+                        <p>Content: ${postContent}</p>
                     </div>
                 `
             } else {
                 console.log("please fill in the form")
             }
+
+            form.reset();
         }) 
 }
 
