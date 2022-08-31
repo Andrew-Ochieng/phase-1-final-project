@@ -14,7 +14,7 @@ function colorChange() {
 
 
 
-// endpoints
+// api endpoints
 // const apiUrl = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=1b59ecc8e3f24bdc800f1e087490230b';
 // const techUrl = 'https://inshorts.deta.dev/news?category=technology'
 const latestlUrl = "http://localhost:3000/latests"
@@ -101,6 +101,8 @@ form.addEventListener('submit', (e) => {
 
     postNews();
 
+    form.reset();
+
 })
 
 function postNews() {
@@ -122,10 +124,10 @@ function postNews() {
         .then((response) => response.json())
         .then((data) => {
             console.log(data)
-            if (postTitle !== "" && author !== "" && postContent.value !== "") {
-                let posts = document.getElementById("public-posts").innerHTML;
-                posts += `
-                    <divclass="my-4 rounded-md border-2 border-gray-800">
+            if (postTitle !== "" && author !== "" && postContent !== "") {
+                
+                document.getElementById("public-posts").innerHTML += `
+                    <div class="my-4 rounded-md border-2 border-gray-800">
                         <h2 class="text-xl text-gray-800 font-semibold">Title: ${data.postTitle}</h2>
                         <h3 class="my-2 text-base font-medium text-green-600">Author: ${data.author}</h3>
                         <p class="text-base">Content: ${data.postContent}</p>
@@ -135,8 +137,9 @@ function postNews() {
                 console.log("please fill in the form")
             }
 
-            form.reset();
+            // form.reset();
         }) 
+
 }
 
 
