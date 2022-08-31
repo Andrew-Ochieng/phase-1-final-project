@@ -127,14 +127,15 @@ function postNews() {
             if (postTitle !== "" && author !== "" && postContent !== "") {
                 
                 document.getElementById("public-posts").innerHTML += `
-                    <div class="my-4 rounded-md border-2 border-gray-800">
-                        <h2 class="text-xl text-gray-800 font-semibold">Title: ${postTitle}</h2>
-                        <h3 class="my-2 text-base font-medium text-green-600">Author: ${author}</h3>
+                    <div class="my-4 p-4 rounded-md border-2 border-gray-600">
+                        <h2 class="text-xl text-gray-800 font-semibold">${postTitle}, 
+                            <span class="my-2 text-base font-medium text-green-600">${author}</span>
+                        </h2>
                         <p class="text-base">Content: ${postContent}</p>
                     </div>
                 `
             } else {
-                console.log("please fill in the form")
+                console.log("Please fill in the form!")
             }
 
             // form.reset();
