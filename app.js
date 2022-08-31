@@ -2,14 +2,23 @@
 // toggle navbar
 const hambuger = document.getElementById("hambuger")
 const navbar = document.getElementById("menu")
+const times = document.getElementById("times")
 
 hambuger.addEventListener('click', () => {
     navbar.classList.toggle("hidden")
+
 })
 
-function colorChange() {
-    hambuger.style.color = "white"
+function changeDisplay() {
+    hambuger.style.display = "none"
+    times.style.display = "flex"
+}
 
+function toggleMenu() {
+    navbar.classList.toggle("hidden")
+    times.style.display = "none"
+    hambuger.style.display = "flex"
+    
 }
 
 
@@ -131,14 +140,13 @@ function postNews() {
                         <h2 class="text-xl text-gray-800 font-semibold">${postTitle}, 
                             <span class="my-2 text-base font-medium text-green-600">${author}</span>
                         </h2>
-                        <p class="text-base">Content: ${postContent}</p>
+                        <p class="text-base text-gray-800">${postContent}</p>
                     </div>
                 `
             } else {
                 console.log("Please fill in the form!")
             }
 
-            // form.reset();
         }) 
 
 }
