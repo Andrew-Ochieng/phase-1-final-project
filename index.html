@@ -69,7 +69,22 @@
             <button id="local-btn" class="bg-green-700 rounded-md text-white font-semibold px-4 py-2">See All</button>
         </div>
 
-        <div id="news" class="md:flex justify-bewtween md:space-x-8">
+        <div id="local-news" class="md:flex justify-bewtween md:space-x-8">
+            
+            
+        </div>
+    </section>
+
+
+
+    <!--regional-news-->
+    <section class="lg:px-16 md:px-8 px-4 py-8" id="regional">
+        <div class="flex justify-between items-center py-8">
+            <h2 class="md:text-2xl text-xl font-semibold text-green-700">Regional News</h2>
+            <button id="regional-btn" class="bg-green-700 rounded-md text-white font-semibold px-4 py-2">See All</button>
+        </div>
+
+        <div id="regional-news" class="md:flex justify-bewtween md:space-x-8">
             
             
         </div>
@@ -84,7 +99,7 @@
             <button id="int-btn" class="bg-green-700 rounded-md text-white font-semibold px-4 py-2">See All</button>
         </div>
 
-        <div id="international" class="md:flex justify-bewtween md:space-x-8">        
+        <div id="international-news" class="md:flex items-center justify-bewtween">        
             
         </div>
     </section>
@@ -93,36 +108,40 @@
     <!--public-posts-->
     <section class="lg:px-16 md:px-8 px-4 py-8">
         <div class="flex justify-between items-center">
-            <h2 class="md:text-2xl text-xl font-semibold text-green-700">Public News Posts</h2>
+            <h2 class="md:text-2xl text-xl font-semibold text-green-700">Public Opinions</h2>
             <button class="bg-green-700 rounded-md text-white font-semibold px-4 py-2">See All</button>
         </div>
 
-        <div id="public-posts" class="md:flex justify-bewtween md:space-x-8">        
+        <div id="public-opinon" class="md:flex justify-bewtween md:space-x-8">        
             
         </div>
     </section>
-
+    
 
     <!--post news-->
     <section class="lg:px-16 md:px-8 px-4 py-8">
-        <h2 class="md:text-2xl text-xl font-semibold text-green-700">Post News</h2>
+        <h2 class="md:text-2xl text-xl font-semibold text-green-700">Post Opinion</h2>
         <div>
             <form id="form" action="#" method="post">
                 <div class="py-4">
                     <label class="" for="title">Title</label><br>
-                    <input class="md:w-1/2 w-full px-2 py-2 outline-none ring-2 rounded-md" type="text" id="post-title" placeholder="Type title here...">
+                    <input class="xl:w-1/2 lg:w-2/3 w-full px-2 py-2 outline-none ring-2 rounded-md" type="text" id="post-title" placeholder="Type title here...">
                 </div>
                 <div class="py-4">
                     <label class="" for="author">Author</label><br>
-                    <input class="md:w-1/2 w-full px-2 py-2 outline-none ring-2 rounded-md" type="text" id="author" placeholder="Type your name here...">
+                    <input class="xl:w-1/2 lg:w-2/3 w-full px-2 py-2 outline-none ring-2 rounded-md" type="text" id="author" placeholder="Type your name here...">
+                </div>
+                <div class="py-4">
+                    <label class="" for="image">Image</label><br>
+                    <input class="xl:w-1/2 lg:w-2/3 w-full px-2 py-2 outline-none ring-2 rounded-md" type="file" id="image" placeholder="Type your name here...">
                 </div>
                 <div>
                     <label class="" for="content">Content</label><br>
-                    <textarea class="md:w-1/2 w-full px-2 py-2 outline-none ring-2 rounded-md" id="post-content" cols="30" rows="3" placeholder="Type content here..."></textarea>
+                    <textarea class="xl:w-1/2 lg:w-2/3 w-full px-2 py-2 outline-none ring-2 rounded-md" id="post-content" cols="30" rows="3" placeholder="Type content here..."></textarea>
                 </div>
                 <input class="py-2 px-8 my-2 rounded-md text-white font-semibold hover:text-gray-700 bg-green-500 hover:bg-green-600 shadow-md hover-shadow-xl shadow-cyan-600" type="submit" value="Post" >
             </form>
-
+            
         </div>
     </section>
 
