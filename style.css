@@ -1,16 +1,49 @@
+/* additional styles */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
 #title-btn {
+    /* background-image: url(); */
     background-color: green;
-    border: none;
+    padding: 12px 24px;
     border-radius: 10px;
+    border: none;
     font-weight: 700;
-    padding: 10px 20px;
-    color: white;
     margin-bottom: 10px;
+    color: white;
 }
 
 #title-btn:hover {
+    background: rgb(5, 162, 5);
+    animation-duration: 500s;
     color: rgb(66, 66, 66);
 }
+
+
+/* media queries*/
+@media (min-height: 680px), screen and (orientation: portrait) {
+    #title-btn {
+        padding: 10px 20px;
+
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
