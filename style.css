@@ -1,6 +1,16 @@
+#title-btn {
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 10px 20px;
+    color: white;
+    margin-bottom: 10px;
+}
 
-
-
+#title-btn:hover {
+    color: rgb(66, 66, 66);
+}
 
 
 
