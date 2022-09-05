@@ -43,14 +43,38 @@ function getLatest() {
         data.slice(0, 1).forEach(latest => {
 
             output += `
-            <div class="md:flex justify-bewtween">
-                <div class="relative shadow-lg hover:shadow-xl hover:scale-95 hover:translate-2 hover:transform duration-500 text-center">
-                    <img class="rounded-lg " src="${latest.urlToImage}" alt="">
+            <div class="md:flex justify-bewtween lg:space-x-32 md:space-x-8">
+                <div class="relative shadow-lg hover:shadow-xl hover:scale-105 hover:translate-2 hover:transform duration-500 text-center">
+                    <img class="rounded-lg w-full" src="${latest.urlToImage}" alt="">
                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                         <a class="md:text-4xl text-3xl text-white font-bold tracking-wide cursor-pointer hover:text-gray-100 href="${latest.url}">${latest.title}</a>
                         <p class="md:text-2xl text-lg font-medium mb-2">${latest.description}</p>
                         <h3 class="text-lg py-2 font-semibold text-green-200">${latest.author}, <span class="font-medium">${latest.name}</span></h3>
                     </div>
+                </div>
+
+                <div class="md:flex flex-col space-y-8 hidden">
+                    <div class="relative shadow-lg hover:shadow-xl hover:scale-105 hover:translate-2 hover:transform duration-500">
+                        <div class="w-1/2 float-right">
+                            <img class="rounded-lg" src="${latest.urlToImage}" alt="">
+                        </div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                            <a class="md:text-2xl text-lg text-white font-bold tracking-wide cursor-pointer hover:text-gray-100 href="${latest.url}">${latest.title}</a>
+                            <p class="md:text-xl text-lg font-medium mb-2">${latest.description}</p>
+                            <h3 class="text-lg py-2 font-semibold text-green-200">${latest.author}, <span class="font-medium">${latest.name}</span></h3>
+                        </div>
+                    </div>
+                    <div class="relative shadow-lg hover:shadow-xl hover:scale-105 hover:translate-2 hover:transform duration-500">
+                        <div class="w-1/2 float-right">
+                            <img class="rounded-lg" src="${latest.urlToImage}" alt="">
+                        </div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                            <a class="md:text-2xl text-lg text-white font-bold tracking-wide cursor-pointer hover:text-gray-100 href="${latest.url}">${latest.title}</a>
+                            <p class="md:text-xl text-lg font-medium mb-2">${latest.description}</p>
+                            <h3 class="text-lg py-2 font-semibold text-green-200">${latest.author}, <span class="font-medium">${latest.name}</span></h3>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             `
@@ -107,17 +131,14 @@ function getRegional() {
                 
                 region += `
                     <div class="md:flex justify-bewtween">
-                        <div class="bg-green-300 rounded-md mx-4 ">
+                        <div class="bg-green-300 hover:bg-green-400 rounded-md shadow-lg hover:shadow-xl hover:scale-105 hover:translate-x-2 hover:transform duration-500">
                             <div class="">
                                 <img class="rounded-t-lg" id="img-url" src="${regional.urlToImage}" alt="">
                             </div>
-                            <div class="pt-2 pb-4 px-6 my-8">
+                            <div class="pt-2 pb-4 px-6 my-4">
                                 <h3 class="text-xl font-semibold text-gray-800">${regional.title}</h3>
-                                <h3 class="py-2 font-semibold text-green-800">${regional.author}, <span class="font-medium">${regional.name}</span></h3>
-                                <p class="mb-4">${regional.description}</p>
-                                <a class="text-white bg-green-600 text-lg font-medium px-4 py-4 mt-2 rounded-md" href="${regional.url}">
-                                    Read more
-                                </a>
+                                <p>${regional.description}</p>
+                                <h3 class="py-2 font-semibold text-green-800" href="${regional.source_url}">By ${regional.author}</h3>
                             </div>
                         </div>
                     </div>
@@ -131,7 +152,7 @@ function getRegional() {
 
 
 // display international
-function getRegional() {
+function getInternational() {
     fetch(intUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -142,14 +163,14 @@ function getRegional() {
                 
                 inter += `
                     <div class="md:flex justify-bewtween">
-                        <div class="bg-green-300 rounded-md mx-4 ">
+                        <div class="bg-green-300 hover:bg-green-400 rounded-md md:p-8 shadow-lg flex flex-col hover:shadow-xl hover:scale-105 hover:translate-x-2 hover:transform duration-500">
                             <div class="">
                                 <img class="rounded-t-lg" id="img-url" src="${international.urlToImage}" alt="">
                             </div>
                             <div class="pt-2 pb-4 px-6 my-8">
                                 <h3 class="text-xl font-semibold text-gray-800">${international.title}</h3>
-                                <h3 class="py-2 font-semibold text-green-800">${international.author}, <span class="font-medium">${international.name}</span></h3>
-                                <p class="mb-4">${international.description}</p>
+                                <p>${international.description}</p>
+                                <h3 class="py-2 font-semibold text-green-800" href="${international.source_url}">By ${international.author}</h3>
                             </div>
                         </div>
                     </div>
